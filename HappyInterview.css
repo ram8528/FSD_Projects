@@ -1,0 +1,569 @@
+/* Import fonts - you only need to import both families once */
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Define required CSS variables */
+:root {
+  --white: #ffffff;
+  --green: #075e3e;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* example shadow */
+}
+
+body {
+  color: #000;
+  font-family: "Playfair Display", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  display: block;
+}
+
+.firstpage {
+  height: 520px;
+  position: relative;
+  background: var(--green); /* fixed: changed var(#075e3e) to var(--green) */
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: "Clicker Script", cursive;
+  font-size: 35px;
+  color: var(--white);
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.333;
+}
+.title2 {
+  margin: 0;
+  font: 500 18px "Playfair Display", serif;
+  letter-spacing: 0;
+  line-height: 1.333;
+}
+
+.navbar {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+}
+
+.navbar a {
+  color: var(--white);
+  font: 500 14px "Playfair Display", serif;
+  text-decoration: none;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth .login {
+  color: var(--white);
+  font: 500 14px "Playfair Display", serif;
+  text-decoration: none;
+}
+
+.auth .signup {
+  background: var(--green);
+  color: var(--white);
+  display: inline-block;
+  border-radius: 24px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background: url("https://happy-interview.vercel.app/assets/hero-coffee-Cf2QJEuL.jpg")
+    center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #1e1e1e 25%, #0000 88%);
+}
+
+.firstpage-content {
+  position: relative;
+  z-index: 1;
+  max-width: 627px;
+  margin-left: 60px;
+  padding-top: 100px;
+  color: var(--white);
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  font: 300 67px "Clicker Script", cursive;
+  line-height: 1.3208;
+}
+
+.happy-word,
+.interview-word {
+  font-family: "Clicker Script", cursive;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  display: inline;
+  vertical-align: baseline;
+  margin-right: 0.3rem;
+}
+
+.happy-word {
+  font-size: 3.8rem;
+  color: #fff;
+}
+
+.interview-word {
+  font-size: 4rem;
+  color: #2d5016;
+}
+
+.subtitle {
+  margin: 22px 0 24px;
+  font: 400 16px "Playfair Display", serif;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.btn {
+  background: var(--green);
+  color: var(--white);
+  display: inline-block;
+  border-radius: 24px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+/* Floating image/card */
+.floating-image {
+  position: absolute;
+  top: 160px; /* vertical position under navbar */
+  right: 80px; /* spacing from right edge */
+  z-index: 2;
+}
+
+.floating-image img {
+  width: 420px; /* adjust size */
+  height: auto;
+  border-radius: 14px; /* rounded corners */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-image img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.55);
+}
+
+:root {
+  --brown: #6b4e31;
+  --muted: #888;
+  --white: #fff;
+}
+
+/* Section Layout */
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 72px 24px;
+  display: block;
+}
+
+.section-centered {
+  text-align: center;
+}
+
+/* Headings */
+.video-title {
+  font: 700 54px "Playfair Display", serif;
+  color: var(--brown);
+  margin-bottom: 16px;
+  margin-top: 250px;
+}
+
+/* Description Text */
+.video-desc {
+  font: 400 20px "Playfair Display", serif;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 auto 32px;
+  max-width: 720px;
+}
+
+/* Video Card */
+.code-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #012601;
+  color: var(--white);
+  padding: 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(40px);
+  max-width: 780px;
+  margin: 0 auto;
+  height: 340px;
+}
+
+/* Video Wrapper */
+.code-card_gutter {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #024b02;
+  border-radius: 20px;
+}
+
+/* Video Styling */
+.code-card_gutter video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border: 5px solid green;
+  border-radius: 20px;
+}
+
+/* Root Section Styling */
+.subscription-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  background-color: #fefefe;
+}
+
+/* Title Styling */
+.sub-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #4a2e2e; /* Dark brown */
+  margin-bottom: 10px;
+}
+
+/* Subtitle Styling */
+.sub-desc {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 48px;
+}
+
+/* Cards Container */
+#sub-image {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Individual Card Wrapper */
+.sub-card {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #eaf9ed; /* matches your image's light green */
+  transition: transform 0.3s ease;
+}
+
+.sub-card:hover {
+  transform: translateY(-6px);
+}
+/* Image Sizing */
+.sub-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Positioning frames on top of card images */
+.with-frame {
+  position: relative;
+}
+
+.frame-overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Increase width to fill more of the card */
+  max-width: 200px; /* Prevent it from being too large on big screens */
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Optional: ensure base image is below the overlay */
+.with-frame img:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.guarantee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.guarantee img {
+  height: 70vh;
+  width: 60vw;
+}
+
+/* Section with Background Image */
+.referral-section {
+  background: url("https://happy-interview.vercel.app/assets/referral-bg-BtI5Ullm.jpg")
+    center center / cover no-repeat;
+  height: 100dvh; /* Use dynamic viewport height for better mobile support */
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent internal scroll */
+}
+
+/* Dark Overlay */
+.referral-overlay {
+  background-color: rgba(0, 51, 0, 0.5); /* dark green transparent */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Text Content Styling */
+.referral-content {
+  color: white;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.referral-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 16px;
+}
+
+.referral-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #064e3b;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #046c4e;
+}
+
+.customer-say {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Newsletter Section */
+.newsletter {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* full screen height */
+  background: url("4.png") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.newsletter-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 51, 0, 0.7); /* dark green overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Inner content layout */
+.newsletter-inner {
+  text-align: center;
+  max-width: 600px;
+  color: #fff;
+}
+
+.kicker {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.section-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #f0f0f0;
+}
+
+/* Form styling */
+.nl-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.nl-form input[type="email"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.btn-accent {
+  background-color: #047857;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #065f46;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #015636;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Great Vibes", cursive;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.sub-title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.sub-desc {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
