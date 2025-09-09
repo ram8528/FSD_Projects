@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form_signup {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .form_signup input[type="text"],
+      .form_signup input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      .form_signup input[type="text"]:focus,
+      .form_signup input[type="password"]:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .btn button {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .btn button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .btn button[type="reset"] {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .btn button[type="reset"]:hover {
+        background-color: #d32f2f;
+      }
+
+      @media (max-width: 500px) {
+        .form_signup {
+          padding: 20px;
+        }
+
+        .btn {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" class="form_signup">
+      <input type="text" placeholder="Enter your name" required />
+      <input type="text" placeholder="Enter your email" required />
+      <input type="password" placeholder="Enter password" required />
+      <div class="btn">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <script>
+      document
+        .querySelector(".form_signup")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document
+            .querySelector('input[type="text"]')
+            .value.trim();
+
+          const password = document
+            .querySelector('input[type="password"]')
+            .value.trim();
+
+          if (!email || !password) {
+            alert("Either Email or Password missing");
+          }
+
+          alert("Signed Up,Login Now");
+          window.location.href = "Login.html";
+        });
+    </script>
+  </body>
+</html>
